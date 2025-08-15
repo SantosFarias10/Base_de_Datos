@@ -99,3 +99,29 @@ Una **Instancia** de un diseño de Base de Datos relacional son las **Tablas par
 
 ### Atributos
 
+**Dominio del atributo**: Es el conjunto de valores permitidos para cada atributo. Un dominio puede tener el **Valor Nulo**.
+<br> Los valores de los atributos deben ser **Atomicos**, o sea, indivisibles.
+
+### Superclave
+
+Cuando tenemos una relacion de un esquema de relacion queremos poder **Identificar las tuplas** de una relacion, por medio de los valores de ciertos atributos. A los atributos usados para identificar las tuplas se las llamas **Superclaves**. Sea $K⊆R$, $R$ esquema de relacion; $K$ es una **Superclave** de $R$ si los valores para $K$ son suficientes para identificar una tupla unica en cada posible relacion $r(R)$.
+
+### Claves Candidatas y Claves Primarias
+
+En la practica no nos interesa todas las superclaves, si no nos interesa las **Superclaves Minimales**. **Minimal** significa que para todo atributo de $K$ si se lo quito a $K$ dejo de tener una superclave (ok?). Superclave minimal ≠ superclave de cardinalidad minima. Estas superclaves minimales se les llama **Claves Candidatas**, cuando una clave candidata es elegida se le llama **Clave Primaria**
+
+* **Notacion**: Se indica los atributos de una clave primaria para un esquema de la relacion $R$ **Subrayando** los atributos de $R$ que forman la clave primaria.
+
+### Claves Foraneas
+
+**Restriccion de claves foraneas** (o de integridad referencial): Dice que el valor en una relacion debe aparecer en otra. Los valores de uno o mas atributos en una tupla de la relacion referenciante aparecen en uno o mas atributos de una tupla en la relacion referenciada. Los atributos referenciados en una relacion referenciada suelen formar una **Clave Primaria** del esquema de la relacion referenciada.
+
+Representacion grafica:
+
+* Los esquemas se representan con **rectangulos** conteniendo nombre de esquema y nombres de atributos.
+* Los atributos de clave primaria se **subrayan**.
+* Las restricciones de clave foranea se representan mediante **flechas** que van de atributos referenciantes (de esquema referenciante) a atributos referenciados (de esquema referenciado).
+
+![Ejemplo de Claves Foraneas](../Base_de_Datos/Imagenes/Ejemplo_Claves_Foraneas.png)
+
+### Diseño de una Base de Datos Relacional
